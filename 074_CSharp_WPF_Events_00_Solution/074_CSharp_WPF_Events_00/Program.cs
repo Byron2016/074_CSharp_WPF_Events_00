@@ -8,4 +8,24 @@
             Console.WriteLine("Hello, World!");
         }
     }
+
+    internal class NumRandom
+    {
+        public int Numero { get; set; }
+        private int _cont;
+
+        public int Cont
+        {
+            get { return _cont; }
+            set {
+                if( _cont != value)
+                {
+                    _cont = value;
+                }
+            }
+        }
+
+        public event ManejadorEventos<int> CambiaNumero;
+
+    }
 }
