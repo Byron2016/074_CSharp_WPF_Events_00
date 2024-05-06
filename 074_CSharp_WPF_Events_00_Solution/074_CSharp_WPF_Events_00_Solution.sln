@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "074_CSharp_WPF_Events_00", "074_CSharp_WPF_Events_00\074_CSharp_WPF_Events_00.csproj", "{8A7DFA53-F736-406D-BCA1-6A844CC831AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A7DFA53-F736-406D-BCA1-6A844CC831AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7DFA53-F736-406D-BCA1-6A844CC831AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7DFA53-F736-406D-BCA1-6A844CC831AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7DFA53-F736-406D-BCA1-6A844CC831AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC79F54D-F8D9-485A-8AB1-AEBC0398E3F0}
+	EndGlobalSection
+EndGlobal
