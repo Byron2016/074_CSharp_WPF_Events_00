@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace _074_CSharp_WPF_Events_00
 {
-    public delegate void ManejadorEventos<T>(Object source, T datos);
+    //public delegate void ManejadorEventos<T>(Object source, T datos);
     internal class Program
     {
         //video 1: La Ruta Dev: Qué son y Cómo Funcionan los Eventos en C# ✅ | La guía definitiva.
@@ -11,6 +11,9 @@ namespace _074_CSharp_WPF_Events_00
 
         //video 2: Cómo Personalizar Un Evento En C# | La guía definitiva  ✅ 
         //www.youtube.com/watch?v=S3V0ZaU9wio&list=PLSmWs9lvUXbAmyFfJJorZErjEhUWRh_1W&index=2
+
+        //video 3: EventHandler En C# | La guía definitiva ✅
+        //www.youtube.com/watch?v=AWmiOfEi4mg&list=PLSmWs9lvUXbAmyFfJJorZErjEhUWRh_1W&index=3
 
 
         static NumRandom numero;
@@ -91,8 +94,10 @@ namespace _074_CSharp_WPF_Events_00
             }
         }
 
-        private ManejadorEventos<int> _evtCambiaNumero;
-        public event ManejadorEventos<int> EvtCambiaNumero
+        //private ManejadorEventos<int> _evtCambiaNumero;
+        //public event ManejadorEventos<int> EvtCambiaNumero
+        private EventHandler<int> _evtCambiaNumero;
+        public event EventHandler<int> EvtCambiaNumero
         {
             add
             {
