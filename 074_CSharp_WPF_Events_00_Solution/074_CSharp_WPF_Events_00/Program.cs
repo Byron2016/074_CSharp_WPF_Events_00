@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace _074_CSharp_WPF_Events_00
 {
@@ -7,6 +8,10 @@ namespace _074_CSharp_WPF_Events_00
     {
         //video 1: La Ruta Dev: Qué son y Cómo Funcionan los Eventos en C# ✅ | La guía definitiva.
         //www.youtube.com/watch?v=ZNT_f4LC4Eg&list=PLSmWs9lvUXbAmyFfJJorZErjEhUWRh_1W
+
+        //video 2: Cómo Personalizar Un Evento En C# | La guía definitiva  ✅ 
+        //www.youtube.com/watch?v=S3V0ZaU9wio&list=PLSmWs9lvUXbAmyFfJJorZErjEhUWRh_1W&index=2
+
 
         static NumRandom numero;
         static int random;
@@ -19,6 +24,8 @@ namespace _074_CSharp_WPF_Events_00
             numero.EvtCambiaNumero += CambiaNumero;
             numero.EvtCambiaNumero += CambiaNumeroSuccess;
             numero.EvtCambiaNumero += CambiaNumeroFail;
+            numero.EvtCambiaNumero += CambiaNumeroFail;
+            numero.EvtCambiaNumero -= CambiaNumeroFail;
 
             while (random != numero.Numero)
             {
@@ -79,12 +86,26 @@ namespace _074_CSharp_WPF_Events_00
                     _cont = value;
                     //?- valida que no sea null
                     //if(CambiaNumer != null)
-                    EvtCambiaNumero?.Invoke(this, this._cont);
+                    _evtCambiaNumero?.Invoke(this, this._cont);
                 }
             }
         }
 
-        public event ManejadorEventos<int> EvtCambiaNumero;
+        private ManejadorEventos<int> _evtCambiaNumero;
+        public event ManejadorEventos<int> EvtCambiaNumero
+        {
+            add
+            {
+                _evtCambiaNumero += value;
+                Console.WriteLine($"Añadido el método {value} al evento EvtCambiaNumero");
+            }
+
+            remove
+            {
+                _evtCambiaNumero -= value;
+                Console.WriteLine($"Eliminado el método {value} del evento EvtCambiaNumero");
+            }
+        }
 
     }
 }
