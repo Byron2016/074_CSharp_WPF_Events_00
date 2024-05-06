@@ -3,6 +3,7 @@
     public delegate void ManejadorEventos<T>(Object source, T datos);
     internal class Program
     {
+        //www.youtube.com/watch?v=ZNT_f4LC4Eg&list=PLSmWs9lvUXbAmyFfJJorZErjEhUWRh_1W
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
@@ -21,6 +22,9 @@
                 if( _cont != value)
                 {
                     _cont = value;
+                    //?- valida que no sea null
+                    //if(CambiaNumer != null)
+                    CambiaNumero?.Invoke(this, this._cont);
                 }
             }
         }
